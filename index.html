@@ -5,31 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krushiraj - Coming Soon</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
+            height: 100vh;
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
-            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        /* Dark overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease-in-out;
         }
         h1 {
             font-size: 3em;
             margin-bottom: 10px;
         }
         p {
-            font-size: 1.2em;
-            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 12px 25px;
+            background: #f4c542;
+            color: #333;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #ffd65c;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Welcome to Krushiraj</h1>
-        <p>Our website is opening soon. Stay tuned!</p>
+    <div class="content">
+        <h1>🌾 Welcome to Krushiraj</h1>
+        <p>Our website is sowing the seeds... Coming soon!</p>
+        <a href="#" class="btn">Notify Me</a>
     </div>
 </body>
 </html>
